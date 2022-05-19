@@ -1,15 +1,15 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import HomePage from './Components/Home Page/homepage';
+import { useState } from 'react'
 
-function DropdownFilters() => {
-    const dropdownRef = useRef(null);
+const DropdownFilters = () => {
+    
     const [isActive, setIsActive] = useState(false);
   
     return (
         <div className="filter-container">
-            <button onClick={onClick} className="filter-button">Filter</button>
-            <nav ref={dropdownRef} className={'filter ${isActive ? 'active' : 'inactive'}'}>
+            <button className="filter-button">Filter</button>
+            <nav className={`filter ${isActive ? 'active' : 'inactive'}`}>
                 <ul>
                     <li className="filter-types">Brand</li>
                     <li className="filter-types">Model</li>
@@ -20,6 +20,7 @@ function DropdownFilters() => {
                     <li className="filter-types">Price</li>
                     <li className="filter-types">Condition</li>
                 </ul>
+            </nav>
         </div>
     );
   };

@@ -5,13 +5,14 @@ import {
   Route,
   Routes
 } from 'react-router-dom';
+import HomePage from './Components/Home Page/homepage';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<p>Home page here</p>} />
+          <Route path='/' element={<HomePage/>} />
           <Route path='/profile/:id' element={<p>Profile lookup page here</p>} />
           <Route path='/post/create' element={<p>Create listing page here</p>} />
           <Route path='/post/:id' element={<p>listing page here</p>} />
