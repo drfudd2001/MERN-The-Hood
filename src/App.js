@@ -1,4 +1,5 @@
 import './App.css';
+
 import {
   BrowserRouter,
   Route,
@@ -16,6 +17,7 @@ function App() {
           <Route path='/post/:id' element={<p>listing page here</p>} />
         </Routes>
       </BrowserRouter>
+
     </div>
   );
 }
