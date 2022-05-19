@@ -1,10 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
-import HomePage from './Components/Home Page/homepage';
+
+import {
+  BrowserRouter,
+  Route,
+  Routes
+} from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
-        <HomePage></HomePage>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<p>Home page here</p>} />
+          <Route path='/profile/:id' element={<p>Profile lookup page here</p>} />
+          <Route path='/post/create' element={<p>Create listing page here</p>} />
+          <Route path='/post/:id' element={<p>listing page here</p>} />
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
