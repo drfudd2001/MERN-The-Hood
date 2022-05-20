@@ -1,11 +1,11 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 
-const Listings = () => {
+const MyListings = () => {
     return(
-        <div class="listings" href="">
+        <div class="my-listings" href="">
         <div class="listing-url">picture goes here</div>
-        <div class="listing-info">
+        <div class="my-listing-info">
             <p class="car-info">Brand:</p>
             <p class="car-info">Model:</p>
             <p class="car-info">Year:</p>
@@ -15,4 +15,4 @@ const Listings = () => {
     );
 };
 
-export default Listings;
+export default MyListings;
