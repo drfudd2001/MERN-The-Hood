@@ -7,7 +7,7 @@ const ListingsGallery = () => {
         <div> Iterator for Listings will be added here
             <Listings/>
         </div>
-    )
-}
+    );
+};
 
 export default ListingsGallery ;
