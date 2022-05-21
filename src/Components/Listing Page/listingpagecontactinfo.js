@@ -1,15 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from '../LoginButton'
+import { Link, useParams } from 'react-router-dom';
 
 const ListingPageContactInfo = () => {
+
+    const [ userData, setUserData ] = useState({});
+    const { user } = useAuth0();
+    const params = useParams();
+
+    const fetchData = async () => {
+        const url = `http://localhost:3001/users/${params.id}`
+        const response = await fetch(url)
+        const responseData = await response.json();
+
+        setUserData(responseData);
+    }
+
+    const getUserData = useEffect(() => {
+        fetchData();
+
+    }, []);
+
+    if (user == null || user === {}) return (
+        <div>
+            <p>Not logged in. Log in to see user data.</p>
+            <Link to='/'>Go back</Link>
+        </div>
+    )
+
     return(
         <div class="contact-info">
-        <p>Name: Random Name</p>
-        <p>Phone: ###-###-####</p>
-        <p>Email: email@email.com</p>
-        <p>City, Sate</p>
+            
+            {
+                !userData ||
+                userData.error != null &&
+                <p>No user with that login!</p>
+            }
 
-    </div>
+
+            <p>Name: {userData.name || 'unnamed'}</p>
+            {
+                userData.phone &&
+                <p>Phone: {userData?.phone}</p>
+            }
+            {
+                userData.state &&
+                userData.city &&
+                <p>{userData.city}, {userData.state}</p>
+            }
+            <p>Email: {userData.email || 'no email'}</p>
+            
+        </div>
     )
 }
 
