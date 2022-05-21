@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<HomePage/>} />
-          <Route path='/profile/:id' element={<p>Profile lookup page here</p>} />
+          <Route path='/profile/:id' element={<p>Profile lookup page</p>} />
           <Route path='/post/create' element={<p>Create listing page here</p>} />
           <Route path='/post/:id' element={<p>listing page here</p>} />
         </Routes>
