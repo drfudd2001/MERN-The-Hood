@@ -8,18 +8,20 @@ const Header = () => {
     const { user } = useAuth0();
 
     return(
-        <nav>
-        <ul>
-            <li>Search Bar</li>
-            {
-                user == null &&
-                <li><LoginButton /></li>
-            }
-            <li>
-                <Link to='/profile/a'>Test</Link>
-            </li>
-        </ul>
-    </nav>
+        <div class="container">
+        <div class="row">
+            <div class="col-sm">Search Bar</div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-primary"><{ user == null && <LoginButton />}>Login</button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-primary"><a href="signup.hmtl">Sign Up</a></button>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-primary"><a href="profile.html">Profile</a></button>
+            </div>
+        </div>
+    </div>
     )
 }
 
