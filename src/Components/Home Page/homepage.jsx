@@ -7,9 +7,11 @@ import ListingsGallery from './listingGallery';
 const HomePage = () => {
     return(
         <div>
-            <Header/>
-            <DropdownFilters/>
-            <ListingsGallery/>
+           <div><Header/></div> 
+           <div className="row">
+                <div className="col-sm-3"><DropdownFilters/></div>
+                <div className='col-sm-8'><ListingsGallery/></div>
+            </div> 
         </div>
     )
 }
