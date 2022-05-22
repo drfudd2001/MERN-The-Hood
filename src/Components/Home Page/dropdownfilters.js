@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { useState } from 'react'
+import { useState } from 'react';
+import style from './homepage.css';
 
 const DropdownFilters = () => {
     
@@ -8,7 +9,7 @@ const DropdownFilters = () => {
   
     return (
         <div className='filters-btn-group'>
-            <h3>Filters</h3>
+            <h3 className='filter-titles'>Filters</h3>
 
             <h6>Brands</h6>
             <div className='brands-btn-group'>

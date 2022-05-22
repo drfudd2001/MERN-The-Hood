@@ -1,6 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Listings from './listings';
+import style from './homepage.css';
 
 const ListingsGallery = () => {
     return(
