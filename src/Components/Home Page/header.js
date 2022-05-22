@@ -11,12 +11,12 @@ const Header = () => {
     return(
         <div class="header-container">
         <div class="row">
-            <div class="col-sm">Search Bar</div>
+            <div class="col-sm" id="header-row">Search Bar</div>
             <div class="col-sm"> { user == null && <LoginButton />} </div>
-            <div class="col-sm">
+            <div class="col-sm" id="header-row">
                 {
                     user != null &&
-                    <p className='btn btn-primary'><Link style={{color: 'white'}} to='/profile/'>My Profile</Link></p>
+                    <p className='btn btn-primary' id="header-row"><Link style={{color: 'white'}} to='/profile/'>My Profile</Link></p>
                 }
             </div>
         </div>

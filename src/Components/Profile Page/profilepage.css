@@ -11,4 +11,22 @@
 
 .post-listing{
     background-color: #A6B1E1;
+    margin: auto;
+    width: 200px;
+}
+
+.post-listing-button{
+    height: 50px;
+    background-color: #B4869F;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #4E4C67;
+}
+
+.post-listing-buffer{
+    height: 75px;
+}
+
+.header-buffer{
+    height: 50px;
 }

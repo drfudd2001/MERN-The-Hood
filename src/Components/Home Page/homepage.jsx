@@ -9,6 +9,7 @@ const HomePage = () => {
     return(
         <div className='theHomePage'>
            <div><Header/></div> 
+           <div className='header-buffer'></div>
            <div className="row">
                 <div className="col-sm-3"><DropdownFilters/></div>
                 <div className='col-sm-8'><ListingsGallery/></div>
