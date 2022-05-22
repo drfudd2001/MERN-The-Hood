@@ -58,9 +58,9 @@ const DropdownFilters = () => {
 
             <h6>Condition</h6>
             <div className='Condition'>
-                <button type='button' className='btn-primary' data-toggle='button' aria-pressed='false' aria-autocomplete='off'>Excellent</button>
-                <button type='button' className='btn-primary' data-toggle='button' aria-pressed='false' aria-autocomplete='off'>Alright</button>
                 <button type='button' className='btn-primary' data-toggle='button' aria-pressed='false' aria-autocomplete='off'>Poor</button>
+                <button type='button' className='btn-primary' data-toggle='button' aria-pressed='false' aria-autocomplete='off'>Alright</button>
+                <button type='button' className='btn-primary' data-toggle='button' aria-pressed='false' aria-autocomplete='off'>Excellent</button>
             </div>
         </div>
     );
