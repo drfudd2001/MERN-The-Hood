@@ -3,10 +3,11 @@ import { useAuth0 } from '@auth0/auth0-react';
 import Header from './header';
 import DropdownFilters from './dropdownfilters';
 import ListingsGallery from './listingGallery';
+import style from './homepage.css';
 
 const HomePage = () => {
     return(
-        <div>
+        <div className='theHomePage'>
            <div><Header/></div> 
            <div className="row">
                 <div className="col-sm-3"><DropdownFilters/></div>
