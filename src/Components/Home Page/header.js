@@ -14,7 +14,10 @@ const Header = () => {
             <div class="col-sm">Search Bar</div>
             <div class="col-sm"> { user == null && <LoginButton />} </div>
             <div class="col-sm">
-                <p className='btn btn-primary'><Link style={{color: 'white'}} to='/profile/'>My Profile</Link></p>
+                {
+                    user != null &&
+                    <p className='btn btn-primary'><Link style={{color: 'white'}} to='/profile/'>My Profile</Link></p>
+                }
             </div>
         </div>
     </div>
