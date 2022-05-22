@@ -37,7 +37,7 @@ const ListingPageContactInfo = () => {
     )
 
     return(
-        <div class="contact-info">
+        <div class="contact-info card">
             
             {
                 !userData ||
