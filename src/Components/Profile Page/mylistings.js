@@ -4,7 +4,7 @@ import style from './profilepage.css';
 
 const MyListings = () => {
     return(
-        <div class="my-listings" href="">
+        <div class="my-listings card" href="">
         <div class="listing-url">picture goes here</div>
         <div class="my-listing-info">
             <p class="car-info">Brand:</p>

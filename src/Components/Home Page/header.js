@@ -9,7 +9,7 @@ const Header = () => {
     const { user } = useAuth0();
 
     return(
-        <div class="container">
+        <div class="header-container">
         <div class="row">
             <div class="col-sm">Search Bar</div>
             <div class="col-sm"> { user == null && <LoginButton />} </div>

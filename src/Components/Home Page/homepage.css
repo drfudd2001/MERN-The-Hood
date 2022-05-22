@@ -22,3 +22,13 @@
     border-width: 3px;
     border-color: #4E4C67;
 }
+
+.header-container{
+    border-style: solid;
+    border-color: #4E4C67;
+}
+
+.col-sm{
+    text-align: center;
+    vertical-align: middle;
+}
