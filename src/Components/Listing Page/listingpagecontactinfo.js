@@ -10,7 +10,13 @@ const ListingPageContactInfo = () => {
     const params = useParams();
 
     const fetchData = async () => {
-        const url = `http://localhost:3001/users/${params.id}`
+
+        if (params.id == null && user == null) return;
+
+        const url = params.id != null ? 
+            `http://localhost:3001/users/${params.id}`
+            : `http://localhost:3001/users/myprofile/${user.sub || ''}`;
+            
         const response = await fetch(url)
         const responseData = await response.json();
 
@@ -20,7 +26,7 @@ const ListingPageContactInfo = () => {
     const getUserData = useEffect(() => {
         fetchData();
 
-    }, []);
+    }, [user]);
 
     if (user == null || user === {}) return (
         <div>
