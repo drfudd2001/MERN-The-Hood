@@ -39,4 +39,7 @@
 
 .contact-info{
   background-color: #A6B1E1;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #4E4C67;
 }

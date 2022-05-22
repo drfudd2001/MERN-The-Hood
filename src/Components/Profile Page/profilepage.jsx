@@ -9,11 +9,16 @@ const ProfilePage = () => {
     return(
         <div className='profile-page'>
             <Header/>
+            <div className='header-buffer'></div>
             <div className='row'>
-                <div className='col-sm-6'><ListingPageContactInfo/></div>
-                <div className='col-sm-6'><MyListings/></div>
+                <div className='col-sm-1'></div>
+                <div className='col-sm-4'><ListingPageContactInfo/></div>
+                <div className='col-sm-2'></div>
+                <div className='col-sm-4'><MyListings/></div>
+                <div className='col-sm-1'></div>
             </div>
-            <PostListing/>
+            <div className='post-listing-buffer'></div>
+                <PostListing/>
         </div>
     );
 };
