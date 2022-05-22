@@ -21,10 +21,6 @@ const MyListings = () => {
         const responseData = await response.json();
 
         if (responseData == null || !Array.isArray(responseData)) return;
-
-        console.log(endpoint);
-        console.log(responseData);
-
         setCarObjects([...carObjects, ...responseData]);
     }
 
