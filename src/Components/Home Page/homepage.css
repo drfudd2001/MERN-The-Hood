@@ -7,7 +7,9 @@
 
 .btn-primary{
     background-color: #B4869F;
-    border-color: #8F91A2;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #4E4C67;
 }
 
 .theHomePage{
