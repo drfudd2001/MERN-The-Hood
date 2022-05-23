@@ -12,7 +12,7 @@ const Header = () => {
     return(
         <div class="header-container">
         <div class="row">
-            <div class="col-sm" id="header-row">Search Bar</div>
+            <div class="col-sm" id="header-row">Insert Searchbar Here</div>
             <div class="col-sm" id='header-row'>
                 {
                     user == null &&
