@@ -10,24 +10,31 @@ const ListingsGallery = () => {
     const [ carObjects, setCarObjects ] = useState([]);
 
     const [ loadMoreVisibile, setLoadMoreVisible ] = useState(false);
+    const [ buttonToggle, setButtonToggle ] = useState(false);
 
     const fetchData = async () => {
-        const url = `http://localhost:3001/cars/${viewedCars}/10`;
+
+        const maxResults = 5
+
+
+        const url = `http://localhost:3001/cars/${viewedCars}/${maxResults}`;
         const response = await fetch(url);
         const responseData = await response.json();
 
         if (responseData == null || !Array.isArray(responseData)) return;
 
-        if (responseData.length >= 10) setLoadMoreVisible(true);
+        if (responseData.length >= maxResults) setLoadMoreVisible(true);
         else setLoadMoreVisible(false);
 
         setViewedCars(viewedCars + responseData.length);
         setCarObjects([...carObjects, ...responseData]);
     }
 
+    const loadData = useEffect(()=> { fetchData() }, []);
+
     const paginate = useEffect(() => {
         fetchData();
-    }, [])
+    }, [buttonToggle])
 
     const formatListings = carObjects.map( carObject => {
 
@@ -43,7 +50,7 @@ const ListingsGallery = () => {
 
             {
                 loadMoreVisibile &&
-                <button>Load more!</button> 
+                <button onClick={() => setButtonToggle(!buttonToggle)}>Load more!</button> 
                 //This will call paginate useEffect
             }
         </div>
