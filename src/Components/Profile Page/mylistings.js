@@ -13,8 +13,8 @@ const MyListings = () => {
     const fetchData = async () => {
 
         const endpoint = params.id != null ? 
-            `http://tailgater-api.herokuapp.com/cars/mylistings/id/${params.id}` :
-            `http://tailgater-api.herokuapp.com/cars/mylistings/sub/${user.sub}`;
+            `https://tailgater-api.herokuapp.com/cars/mylistings/id/${params.id}` :
+            `https://tailgater-api.herokuapp.com/cars/mylistings/sub/${user.sub}`;
 
         const url = endpoint;
         const response = await fetch(url);

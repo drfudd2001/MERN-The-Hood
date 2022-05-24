@@ -9,7 +9,7 @@ const ListingPage = () => {
     return (
         <div>
             <p>Create your car listing here!</p>
-                    <form className='m-auto text-center font-size-3 justify-content-evenly' method='POST' action='http://tailgater-api.herokuapp.com/cars/'>
+                    <form className='m-auto text-center font-size-3 justify-content-evenly' method='POST' action='https://tailgater-api.herokuapp.com/cars/'>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputMake">Make</label>

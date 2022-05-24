@@ -16,7 +16,7 @@ const ListingsGallery = () => {
 
         const maxResults = 5
 
-        const url = `http://tailgater-api.herokuapp.com/cars/${viewedCars}/${maxResults}`;
+        const url = `https://tailgater-api.herokuapp.com/cars/${viewedCars}/${maxResults}`;
         const response = await fetch(url);
         const responseData = await response.json();
 

@@ -22,8 +22,8 @@ const ListingPageContactInfo = () => {
         if (params.id == null && user == null) return;
 
         const url = params.id != null ? 
-            `http://tailgater-api.herokuapp.com/users/${params.id}`
-            : `http://tailgater-api.herokuapp.com/users/myprofile/${user.sub || ''}`;
+            `https://tailgater-api.herokuapp.com/users/${params.id}`
+            : `https://tailgater-api.herokuapp.com/users/myprofile/${user.sub || ''}`;
             
         const response = await fetch(url)
         const responseData = await response.json();
@@ -75,7 +75,7 @@ const ListingPageContactInfo = () => {
                 {
                     showForm &&
                     <dialog id='window' className='rounded' style={windowStyles}>
-                        <form className='m-auto text-center font-size-3 justify-content-evenly' method='POST' action={`http://tailgater-api.herokuapp.com/users/`}>
+                        <form className='m-auto text-center font-size-3 justify-content-evenly' method='POST' action={`https://tailgater-api.herokuapp.com/users/`}>
 
 
                             <div class="form-row">
