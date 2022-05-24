@@ -44,7 +44,7 @@ if ( car!= null && carData == {} || carData == null) {
             {
                 showForm &&
                 <dialog id='window' className='rounded' style={windowStyles}>
-                    <form className='m-auto text-center font-size-3 justify-content-evenly' method='POST' action='http://localhost:3001/cars/'>
+                    <form className='m-auto text-center font-size-3 justify-content-evenly' method='POST' action={`http://${process.env.API_URL}/cars/`}>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputMake">Make</label>

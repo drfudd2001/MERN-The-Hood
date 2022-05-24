@@ -22,8 +22,8 @@ const ListingPageContactInfo = () => {
         if (params.id == null && user == null) return;
 
         const url = params.id != null ? 
-            `http://localhost:3001/users/${params.id}`
-            : `http://localhost:3001/users/myprofile/${user.sub || ''}`;
+            `http://${process.env.API_URL}/users/${params.id}`
+            : `http://${process.env.API_URL}/users/myprofile/${user.sub || ''}`;
             
         const response = await fetch(url)
         const responseData = await response.json();
@@ -75,7 +75,7 @@ const ListingPageContactInfo = () => {
                 {
                     showForm &&
                     <dialog id='window' className='rounded' style={windowStyles}>
-                        <form className='m-auto text-center font-size-3 justify-content-evenly' method='POST' action='http://localhost:3001/users/'>
+                        <form className='m-auto text-center font-size-3 justify-content-evenly' method='POST' action={`http://${process.env.API_URL}/users/`}>
 
 
                             <div class="form-row">
