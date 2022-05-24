@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import HomePage from './Components/Home Page/homepage';
 import ProfilePage from './Components/Profile Page/profilepage';
+import ListingPage from './Components/Listing Page/listingpage';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path='/' element={<HomePage/>} />
           <Route path='/profile' element={<ProfilePage />}/>
           <Route path='/profile/:id' element={<ProfilePage />}/>
-          <Route path='/post/create' element={<p>Create listing page here</p>} />
+          <Route path='/post/create' element={<ListingPage/>} />
           <Route path='/post/:id' element={<p>listing page here</p>} />
         </Routes>
       </BrowserRouter>
